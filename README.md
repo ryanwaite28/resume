@@ -3,4 +3,4 @@
 
 -----
 
-https://ryanwaite28.github.io/resume/
+https://ryanwaite28.github.io/resume/index.html
