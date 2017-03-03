@@ -1,0 +1,139 @@
+/* New Style */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: 500;
+}
+
+div, p, a {
+  word-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Arimo', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+header {
+  /*background: lightgrey;;*/
+  background-image: linear-gradient(to bottom, #e6e6e6, #d9d9d9);
+}
+
+#middle {
+  width: 1275px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.3);
+}
+
+#skills-list {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+#skills-list li {
+  padding: 10px;
+  margin: 3px;
+  text-align: center;
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+}
+
+#skills-list li:hover {
+  font-size: 18px;
+  background: lightgrey;
+}
+
+#bio-pic {
+  width: 175px;
+  max-width: 100%;
+  border-radius: 100px;
+  padding: 5px;
+  background: white;
+  display: block;
+  margin: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+#bio-pic:hover, .work-item > img:hover, .app-icon:hover, .ref-icon:hover {
+  width: 200px;
+  padding: 3px;
+}
+
+.row-padd {
+  padding: 25px;
+}
+
+.hr-black {
+  border-color: black;
+}
+
+.bg-white {
+  background: white;
+}
+.bg-grey {
+  background: grey;
+}
+.bg-grey-1 {
+  background: #d9d9d9;
+}
+.bg-grey-2 {
+  background: #f2f2f2;
+}
+.bg-grey-3 {
+  background: lightgrey;
+}
+.bg-grey-4 {
+  background: #bfbfbf;
+}
+.bg-grey-5 {
+  background: #fbfbfb;
+}
+.bg-black {
+  background: black;
+}
+
+.bta {
+  cursor: pointer;
+  font-size: 28px;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+.bta:hover {
+  color: #bfbfbf;
+}
+
+.work-item, .project-item, .education-item, .cert-item, .ref-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.work-item > img, .app-icon, .ref-icon {
+  width: 150px;
+  max-width: 100%;
+  padding: 3px;
+  background: #f2f2f2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.hr-short {
+  width: 275px;
+  max-width: 100%;
+  border-color: black;
+  margin: 30px auto;
+  border-width: 2px;
+}

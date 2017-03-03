@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Ryan M. Waite | Online Resume</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="https://ryanwaite28.github.io/my-cdn/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="https://ryanwaite28.github.io/my-cdn/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="https://ryanwaite28.github.io/my-cdn/css/emerald.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 785px)" href="mobile-style.css">
+	<link rel="icon" type="image/jpg" size="20x20" href="img/pro-ryan-1.jpg" />
+	<script src="https://ryanwaite28.github.io/my-cdn/js/angular.js"></script>
+	<script src="https://ryanwaite28.github.io/my-cdn/js/jquery.js"></script>
+	<script src="https://ryanwaite28.github.io/my-cdn/js/bootstrap.js"></script>
+	<script src="https://ryanwaite28.github.io/my-cdn/js/emerald.js"></script>
+	<script src="script.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="masterCtrl">
+
+	<div id="middle">
+		<div class="container-fluid">
+			<!-- Header -->
+			<header id="header-box" class="row row-padd">
+				<div class="col-md-12">
+					<img id="bio-pic" class="transition" src="img/pro-ryan-1.jpg" title="Ryan M. Waite" alt="Ryan M. Waite"/>
+					<h1 class="text-center"><strong>Ryan M. Waite</strong></h1>
+					<h3 class="text-center">Web Developer/Programmer</h3>
+					<br>
+					<p class="text-center">Online Resume</p>
+					<hr class="hr-black">
+					<p class="text-center">
+						<strong>Location</strong>: <a data-toggle="modal" href="#mapModal">Gaithersburg, MD</a> |
+						<strong>Mobile</strong>: <a title="Cell Phone" href="tel:2402717889">(240) - 271 - 7889</a> |
+						<strong>Email</strong>: <a title="Send Email" href="mailto:ryanwaite28@gmail.com">ryanwaite28@gmail.com</a> |
+						<strong>Google+</strong>: <a title="Google Plus" href="https://plus.google.com/u/0/+RyanWaite28">https://plus.google.com/u/0/+RyanWaite28</a> |
+						<strong>LinkedIn</strong>: <a title="LinkedIn Page" href="https://www.linkedin.com/in/ryanwaite28">https://www.linkedin.com/in/ryanwaite28</a> |
+						<strong>GitHub</strong>: <a title="GitHub Profile" href="https://github.com/ryanwaite28">https://github.com/ryanwaite28</a> |
+						<strong>Online Cover Letter</strong>: <a title="Online Cover Letter" href="https://ryanwaite28.github.io/cover-letter">https://ryanwaite28.github.io/cover-letter</a> |
+						<strong>Resume (PDF)</strong>: <a title="Resume - PDF" href="https://ryanwaite28.github.io/cover-letter/docs/ryan-waite_resume.pdf">https://ryanwaite28.github.io/cover-letter/docs/ryan-waite_resume.pdf</a>
+					</p>
+				</div>
+				<!-- Modal -->
+<div id="mapModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center">Map</h4>
+      </div>
+      <div class="modal-body">
+				<p class="text-center"><a title="Gaithersburg, MD" href="https://www.google.com/maps/place/Gaithersburg,+MD/@39.1355193,-77.2468792,13z/data=!3m1!4b1!4m5!3m4!1s0x89b62d3624ca13b5:0xe38f5a8180ad7235!8m2!3d39.1434406!4d-77.2013705">Gaithersburg, MD (Google Maps)</a></p>
+        <img class="middlr" style="width: 100%;" src="img/gaithersburg_map.png" title="Gaithersburg, MD" alt="Gaithersburg, MD"/>
+      </div>
+    </div>
+
+  </div>
+</div>
+			</header>
+
+			<!-- Sections -->
+			<section id="skills-box" class="row row-padd">
+				<div class="col-md-12">
+					<h2 class="text-center">Skills<br><i class="fa fa-lightbulb-o" aria-hidden="true"></i></h2>
+					<ul id="skills-list">
+						<li class="transition" ng-repeat="s in skills">{{ s }}</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="work-box" class="row row-padd bg-grey-2">
+				<div class="col-md-12">
+					<h2 class="text-center">Work<br><i class="fa fa-briefcase" aria-hidden="true"></i></h2>
+					<br>
+					<div class="work-item bg-grey-1" ng-repeat="w in workItems">
+						<img class="middlr transition" src="{{ w.icon }}" title="{{ w.name }}" alt="{{ w.name }}"/>
+						<h3 class="text-center">{{ w.name }}</h3>
+						<h4 class="text-center">{{ w.title }}</h4>
+						<p class="text-center">{{ w.dates }}</p>
+						<p class="text-center">{{ w.location }}</p>
+						<hr class="hr-short">
+						<ul>
+							<li ng-repeat="t in w.tasks">
+								<p>{{ t }}</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section id="work-box" class="row row-padd bg-grey-4">
+				<div class="col-md-12">
+					<h2 class="text-center">Projects<br><i class="fa fa-file-code-o" aria-hidden="true"></i></h2>
+					<br>
+					<div class="project-item bg-grey-5 row" ng-repeat="p in projects">
+						<div class="col-md-3">
+							<img class="app-icon middlr transition" src="{{ p.image }}" title="{{ p.title }}" alt="{{ p.title }}"/>
+						</div>
+						<div class="col-md-9">
+							<h3 class="">{{ p.title }}</h3>
+								<br>
+								<p class="">
+									{{ p.description }}
+								</p>
+								<p class="">
+									<strong>Project Link</strong>: <a title="{{ p.linkName }}" href="{{ p.linkHref }}"><span>{{ p.linkName }}</span></a>
+								</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="education-box" class="row row-padd">
+				<div class="col-md-12">
+					<h2 class="text-center">Education<br><i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
+					<br>
+					<div class="education-item bg-grey-2" ng-repeat="e in education">
+						<h3 class="emp-2 text-center">{{ e.name }}</h3>
+							<img class="app-icon middlr transition" src="{{ e.icon }}" title="{{ e.name }}" alt="{{ e.name }}"/>
+							<br>
+							<p class="text-center">
+								<strong>Type</strong>: {{ e.type }}<br>
+								<strong>Location</strong>: {{ e.location }}<br>
+								<strong>Major</strong>: {{ e.major }}<br>
+								<strong>Dates</strong>: {{ e.dates }}
+							</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="education-box" class="row row-padd bg-grey-3">
+				<div class="col-md-12">
+					<h2 class="text-center">Credentials<br><i class="fa fa-certificate" aria-hidden="true"></i></h2>
+					<br>
+					<div class="cert-item bg-grey-5" ng-repeat="c in credentials">
+						<h3 class="emp-2 text-center">{{ c.name }}</h3>
+							<a title="{{ c.name }}" href="{{ c.icon }}"><img class="app-icon middlr transition" src="{{ c.icon }}" title="{{ c.name }}" alt="{{ c.name }}"></a>
+							<br>
+							<p class="text-center">
+								<strong>Earned</strong>: {{ c.earned }}<br>
+								<strong>Expires</strong>: {{ c.expires }}<br>
+								<br>
+								<a title="{{ c.name }}" href="{{ c.icon }}">View Large</a>
+							</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="education-box" class="row row-padd">
+				<div class="col-md-12">
+					<h2 class="text-center">References<br><i class="fa fa-users" aria-hidden="true"></i></h2>
+					<br>
+					<div class="ref-item bg-grey-1 row" ng-repeat="r in references">
+						<div class="col-md-3">
+							<img class="ref-icon middlr transition" src="{{ r.icon }}" title="{{ r.name }}" alt="{{ r.name }}"/>
+						</div>
+						<div class="col-md-9">
+							<h3><strong>Name</strong>: {{ r.name }}</h3>
+							<p><strong>Email</strong>: <a title="Send Email To {{ r.name }}" href="mailto:{{ r.email }}">{{ r.email }}</a></p>
+							<p><strong>LinkedIn</strong>: <a title="See {{ r.name }}'s LinkedIn Profile'" href="{{ r.linkedin }}">{{ r.linkedin }}</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer-box" class="row row-padd bg-grey-4">
+				<div class="col-md-12">
+					<h2 class="text-center">Thanks For Coming!<br><i class="fa fa-heart" aria-hidden="true"></i></h2>
+					<p class="text-center"><i title="back to top" class="bta fa fa-arrow-circle-o-up transition" aria-hidden="true"></i></p>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+</body>
+
+</html>
